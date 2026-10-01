@@ -1,1 +1,1 @@
-Todas as integrações nesta pasta são propostas. Nenhum conector é funcional nem possui credenciais configuradas. Revisar segurança, licença, escopo e confirmação humana antes de ativar qualquer integração.
+Todas as integrações nesta pasta são propostas. Nenhum conector é funcional nem possui credenciais configuradas. Consulte o [catálogo de conectores previstos](catalog.md) e os documentos de [MCP](mcp.md), [GitHub](github.md) e [Hugging Face](hugging-face.md). Revisar segurança, licença, escopo e confirmação humana antes de ativar qualquer integração.

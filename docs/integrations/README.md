@@ -1,0 +1,1 @@
+Todas as integrações nesta pasta são propostas. Nenhum conector é funcional nem possui credenciais configuradas. Revisar segurança, licença, escopo e confirmação humana antes de ativar qualquer integração.

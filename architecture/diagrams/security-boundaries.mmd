@@ -1,0 +1,13 @@
+flowchart LR
+  USER[User / client] --> EDGE[Future API boundary]
+  EDGE --> AUTH[Identity + authorization]
+  AUTH --> CORE[Core services]
+  CORE --> TOOL[Tool sandbox]
+  CORE --> MEM[Memory boundary]
+  CORE --> CONN[Connector boundary]
+  TOOL --> EXT[External tools]
+  CONN --> EXT
+  SECRETS[Secret manager] -. scoped access .-> CONN
+  SECRETS -. scoped access .-> TOOL
+  AUDIT[Redacted audit] -. observes policy decisions .-> AUTH
+  HUMAN[Human approval] -. required for sensitive actions .-> TOOL

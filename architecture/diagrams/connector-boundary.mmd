@@ -1,0 +1,10 @@
+flowchart LR
+  CORE[Core / orchestrator] --> POLICY[Permission and policy boundary]
+  POLICY --> ADAPTER[Connector adapter]
+  ADAPTER --> SECRET[Scoped secret provider]
+  ADAPTER --> EXT[External service]
+  EXT --> ADAPTER
+  ADAPTER --> NORMAL[Normalize + provenance]
+  NORMAL --> CORE
+  AUDIT[Redacted audit] -. records .-> POLICY
+  REVOKE[Revocation / expiry] -. control .-> SECRET

@@ -1,0 +1,19 @@
+flowchart LR
+  INPUT[Input] --> DETECT[Modality detection]
+  DETECT --> TEXT[Text]
+  DETECT --> IMAGE[Image]
+  DETECT --> AUDIO[Audio]
+  DETECT --> VIDEO[Video]
+  DETECT --> DOC[Documents]
+  DETECT --> CODE[Code]
+  TEXT --> ENCODE[Future encoding / parsing]
+  IMAGE --> ENCODE
+  AUDIO --> ENCODE
+  VIDEO --> ENCODE
+  DOC --> ENCODE
+  CODE --> ENCODE
+  ENCODE --> CONTEXT[Context representation]
+  CONTEXT --> REASON[Reasoning / processing]
+  REASON --> VALIDATE[Policy + output validation]
+  VALIDATE --> OUTPUT[Action or output]
+  CONSENT[Consent, provenance, limits] -. controls .-> DETECT

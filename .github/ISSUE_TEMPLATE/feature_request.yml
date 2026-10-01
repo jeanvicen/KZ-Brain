@@ -1,0 +1,25 @@
+name: Proposta de capacidade futura
+description: Discuta uma possibilidade futura sem afirmar que já existe.
+labels: [proposal]
+body:
+  - type: markdown
+    attributes:
+      value: "Este formulário registra uma proposta; não autoriza implementação."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou necessidade
+    validations:
+      required: true
+  - type: textarea
+    id: concept
+    attributes:
+      label: Proposta conceitual e limites
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Riscos, segurança, privacidade e alternativas
+    validations:
+      required: true

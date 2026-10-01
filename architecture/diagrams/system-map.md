@@ -1,0 +1,1 @@
+Visual companion: [`../../assets/architecture/kz-brain-system-overview.svg`](../../assets/architecture/kz-brain-system-overview.svg). Editable source: [`system-overview.mmd`](system-overview.mmd). All boxes are future concepts, not deployed systems.

@@ -1,0 +1,22 @@
+name: Proposta de pesquisa
+description: Proponha uma investigação reproduzível.
+labels: [research]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Pergunta de pesquisa
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Método, fontes e critérios de avaliação
+    validations:
+      required: true
+  - type: textarea
+    id: ethics
+    attributes:
+      label: Dados, consentimento, segurança e limitações
+    validations:
+      required: true

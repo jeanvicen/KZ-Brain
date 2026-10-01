@@ -1,0 +1,9 @@
+flowchart LR
+  SOURCE[Approved data sources] --> MANIFEST[Provenance + data card]
+  MANIFEST --> PREP[Future preprocessing]
+  PREP --> CONFIG[Versioned experiment config]
+  CONFIG --> JOB[Isolated training job]
+  JOB --> CKPT[Quarantined checkpoints]
+  CKPT --> EVAL[Evaluation + safety review]
+  EVAL --> RELEASE[Reviewed artifact release]
+  AUDIT[License, privacy, security gate] -. gate .-> MANIFEST

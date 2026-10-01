@@ -1,0 +1,18 @@
+flowchart TB
+  ROOT[KZ-Brain root / supervisor] --> PLAN[Planner]
+  ROOT --> RES[Researcher]
+  ROOT --> CODE[Coder]
+  ROOT --> ANA[Analyst]
+  ROOT --> WRITE[Writer]
+  ROOT --> VIS[Vision]
+  ROOT --> AUDIO[Audio]
+  ROOT --> DATA[Data]
+  ROOT --> SEC[Security]
+  ROOT --> EXEC[Executor · gated]
+  PLAN --> SHARED[Task-scoped shared context]
+  RES --> SHARED
+  CODE --> SHARED
+  ANA --> SHARED
+  WRITE --> SHARED
+  SHARED --> REVIEW[Validation + human approval]
+  REVIEW --> ROOT

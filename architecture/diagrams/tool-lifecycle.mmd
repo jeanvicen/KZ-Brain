@@ -1,0 +1,10 @@
+flowchart LR
+  BRAIN[KZ-Brain] --> REG[Tool registry]
+  REG --> DISC[Capability discovery]
+  DISC --> PERM[Permission layer]
+  PERM -->|approved| EXEC[Isolated execution]
+  PERM -->|sensitive| HUMAN[Human approval]
+  HUMAN --> EXEC
+  EXEC --> VAL[Result validation]
+  VAL --> OBS[Observability and audit]
+  VAL -->|reject / retry bounded| ERR[Controlled failure]

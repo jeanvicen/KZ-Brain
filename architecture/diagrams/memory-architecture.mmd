@@ -1,0 +1,20 @@
+flowchart TB
+  subgraph TEMP[Memória temporária]
+    WM[Working Memory]
+    SM[Session Memory]
+  end
+  subgraph PERSIST[Domínios persistentes futuros · opt-in e isolados]
+    SEM[Semantic Memory]
+    EPI[Episodic Memory]
+    LTM[Long-Term Memory]
+    KNOW[Knowledge Memory]
+    TOOL[Tool Memory]
+    USER[User Context]
+  end
+  WM --> RET[Policies: consent, scope, retention, expiry, delete]
+  SM --> RET
+  RET --> PERSIST
+  PERSIST --> RETR[Retrieval with provenance]
+  RETR --> CTX[Context assembly]
+  ISO[Identity and tenant isolation] -. gate .-> PERSIST
+  AUDIT[Access audit and redaction] -. controls .-> RETR

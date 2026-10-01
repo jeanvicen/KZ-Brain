@@ -1,0 +1,12 @@
+flowchart TB
+  DEV[Development] --> REVIEW[Review and policy gates]
+  REVIEW --> STAGE[Isolated staging]
+  STAGE --> APPROVAL[Release approval]
+  APPROVAL --> PROD[Future production boundary]
+  REG[Artifact registry + provenance] --> STAGE
+  REG --> PROD
+  SEC[Secrets and identity controls] -. scoped config .-> STAGE
+  SEC -. scoped config .-> PROD
+  OBS[Redacted monitoring] -. signals .-> STAGE
+  OBS -. signals .-> PROD
+  ROLLBACK[Rollback / incident plan] -. control .-> PROD

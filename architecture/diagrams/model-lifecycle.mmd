@@ -1,0 +1,10 @@
+flowchart LR
+  SPEC[Model specification] --> DATA[Data and tokenizer research]
+  DATA --> TRAIN[Training / post-training future]
+  TRAIN --> EVAL[Evaluation and safety review]
+  EVAL --> REG[Model registry]
+  REG --> ART[Versioned model artifacts]
+  ART --> RUN[Runtime]
+  RUN --> SERVE[Serving]
+  SERVE --> OBS[Monitoring and feedback]
+  OBS -. reviewed evidence .-> SPEC

@@ -1,0 +1,10 @@
+flowchart LR
+  IN[Objetivo e contexto autorizado] --> CTX[Context assembly]
+  CTX --> PLAN[Planejamento]
+  PLAN --> REASON[Raciocínio / seleção de estratégia]
+  REASON --> POLICY[Policy and permission gate]
+  POLICY --> ACT[Resposta ou ação candidata]
+  ACT --> EVAL[Validação e avaliação]
+  EVAL -->|retorno controlado| CTX
+  EVAL --> OUT[Saída revisada]
+  STOP[Cancelamento / aprovação humana] -. controle .-> POLICY

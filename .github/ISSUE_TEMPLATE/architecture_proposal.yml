@@ -1,0 +1,28 @@
+name: Proposta arquitetural
+description: Proponha uma fronteira ou decisão de arquitetura.
+labels: [architecture]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Contexto e problema
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decisão proposta e alternativas
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: Fronteiras, dependências e contratos
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Segurança, privacidade, operação e riscos
+    validations:
+      required: true

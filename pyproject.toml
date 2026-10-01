@@ -1,0 +1,7 @@
+[project]
+name = "kz-brain"
+version = "0.0.0"
+description = "Documentação e fundação arquitetural do projeto KZ-Brain."
+requires-python = ">=3.11"
+
+# Foundation stage: no runtime package or dependencies are defined.

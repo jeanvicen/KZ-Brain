@@ -1,0 +1,1 @@
+Fontes oficiais dos diagramas vivem em [`../../architecture/diagrams/`](../../architecture/diagrams/README.md). SVGs e ilustrações exportadas devem manter correspondência com a fonte Mermaid e registrar autoria/licença.

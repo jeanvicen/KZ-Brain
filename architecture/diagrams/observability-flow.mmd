@@ -1,0 +1,11 @@
+flowchart LR
+  S[Future components] --> EVT[Event classification]
+  EVT --> REDACT[Redaction + minimization]
+  REDACT --> MET[Metrics]
+  REDACT --> LOG[Restricted logs]
+  REDACT --> TRACE[Traces]
+  REDACT --> AUDIT[Security audit]
+  RETENTION[Retention policy] -. controls .-> LOG
+  RETENTION -. controls .-> TRACE
+  ACCESS[Role-based access] -. controls .-> AUDIT
+  ALERT[Reviewed alerts] <-- MET

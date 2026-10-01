@@ -1,0 +1,16 @@
+sequenceDiagram
+  participant Client
+  participant API as Future API
+  participant Policy as Auth and policy gate
+  participant Runtime as Model runtime
+  participant Model as Approved model artifact
+  participant Obs as Redacted observability
+  Client->>API: Request (future contract)
+  API->>Policy: Authenticate, validate, apply limits
+  Policy->>Runtime: Authorized context and model version
+  Runtime->>Model: Bounded inference
+  Model-->>Runtime: Candidate output
+  Runtime->>Policy: Validate output and safety
+  Policy-->>API: Response or controlled refusal
+  API-->>Client: Versioned response
+  API->>Obs: Minimal, redacted event

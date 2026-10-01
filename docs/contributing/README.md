@@ -1,0 +1,1 @@
+As regras gerais de contribuição estão em [`../../CONTRIBUTING.md`](../../CONTRIBUTING.md). Propostas conceituais devem usar os templates de GitHub e declarar explicitamente que não são capacidades implementadas.

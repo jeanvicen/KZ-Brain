@@ -1,0 +1,21 @@
+flowchart TB
+  subgraph INPUT[Entradas]
+    T[Texto] --- I[Imagem]
+    A[Áudio] --- V[Vídeo]
+    D[Documentos e código]
+  end
+  P[Percepção futura] --> C[Contexto]
+  M[Memória futura] <--> C
+  C --> G[Cognição: raciocínio e planejamento]
+  G --> O[Orquestração]
+  O --> TL[Tools]
+  O --> AG[Especialistas]
+  O --> CO[Conectores]
+  TL --> ML[Camada de modelos]
+  AG --> ML
+  CO --> ML
+  ML --> R[Runtime / serving]
+  R --> API[API e aplicações cliente]
+  INPUT --> P
+  classDef future fill:#111b2b,stroke:#74d6d0,color:#eff6ff
+  class P,C,M,G,O,TL,AG,CO,ML,R,API future
